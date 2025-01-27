@@ -10,7 +10,7 @@ public class Problem {
    }
     
     public static void main(String[] args) {
-        int[] nums={12,3,4,5,56};
+        int[] nums={12,3,4,5,56,33};
 
         int ans=isEven(nums);
         System.out.println(ans);
