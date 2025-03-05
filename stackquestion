@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.util.Stack;
+
+public class StackInput {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Stack<Integer> stack = new Stack<>();
+
+        System.out.println("Enter integers (type 'yes' to stop and print all integers):");
+        while (true) {
+            if (scanner.hasNextInt()) {
+                stack.push(scanner.nextInt());
+            } else {
+                String input = scanner.next();
+                if (input.equalsIgnoreCase("yes")) {
+                    break;
+                }
+            }
+        }
+
+        scanner.close();
+        
+        System.out.println("Stack contents:");
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
+        }
+    }
+}
